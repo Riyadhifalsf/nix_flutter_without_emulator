@@ -2,7 +2,7 @@
   description = "Flutter + Android SDK/NDK Dev Shell (no emulator, ready-to-use)";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     flake-utils.url = "github:numtide/flake-utils";
     android-nixpkgs = {
       url = "github:tadfisher/android-nixpkgs/main";
@@ -29,7 +29,7 @@
           build-tools-36-0-0
           platform-tools
           platforms-android-36
-          ndk-27-0-12077973
+          ndk-28-2-13676358
         ]);
 
         # Patched Flutter derivation (fix cmake/ninja)
@@ -45,9 +45,9 @@
 
         # Pin versions
         minSdkVersion = "21"; 
-        kotlinVersion = "2.0.21";
-        agpVersion = "8.12.3"; # Android Gradle Plugin
-        ndkVersion = "27.0.12077973";
+        kotlinVersion = "2.2.10";
+        agpVersion = "9.4.0"; # Android Gradle Plugin
+        ndkVersion = "28.2.13676358"
 
       in
       {
